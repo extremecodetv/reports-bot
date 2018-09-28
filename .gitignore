@@ -1,0 +1,8 @@
+package-lock.json
+/node_modules
+/.eslintcache
+/logs
+*.log
+.env
+/db/config.json
+mysql_data
