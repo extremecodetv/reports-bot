@@ -1,4 +1,5 @@
 const { bot, chatId, managerUserId } = require('../config');
+const isTag = require('./../util/isTag');
 
 const sendRespect = async (msg) => {
     const report = `Респект от Бородача!
@@ -10,22 +11,8 @@ ${msg.text}
 };
 
 const respectHashtags = ['респект', 'респект_бородача'];
-const isRespect = (text) => {
-    if (!text) {
-        return false;
-    }
-
-    text = text.toLowerCase(); //eslint-disable-line
-    let is = false;
-    respectHashtags.forEach(h => {
-        is = is || (text.indexOf(`#${h}`) >= 0);
-    });
-
-    return is;
-};
-
 module.exports = async (msg) => {
-    if (isRespect(msg.text)) {
+    if (isTag(msg.text, respectHashtags)) {
         if (msg.from.id === Number(managerUserId)) {
             await sendRespect(msg);
         }
