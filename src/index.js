@@ -1,7 +1,6 @@
 const { bot } = require('./config');
-const { handle } = require('./handler');
+const handle = require('./tags');
 const AsyncLock = require('async-lock');
-const app = require('./express');
 
 const lock = new AsyncLock();
 const handleAsync = (msg) => {
@@ -13,10 +12,5 @@ const longPollingMode = async () => {
 };
 
 (async () => {
-    const webHookUrl = process.env.WEBHOOK_URL;
-    if (!webHookUrl) {
-        throw Error('Web hook url is empty');
-    }
-
-    await longPollingMode(webHookUrl);
+    await longPollingMode();
 })();
