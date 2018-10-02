@@ -10,7 +10,7 @@ ${msg.text}
     await bot.sendMessage(chatId, report);
 };
 
-const respectHashtags = ['респект', 'респект_бородача'];
+const respectHashtags = ['респект', 'респект_бородача', 'respect'];
 module.exports = async (msg) => {
     if (isTag(msg.text, respectHashtags)) {
         if (msg.from.id === Number(managerUserId)) {

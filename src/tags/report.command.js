@@ -10,7 +10,7 @@ ${msg.text}
     await bot.sendMessage(chatId, report);
 };
 
-const reportHastags = ['отчет', 'отчёт'];
+const reportHastags = ['отчет', 'отчёт', 'report'];
 module.exports = async (msg) => {
     if (isTag(msg.text, reportHastags)) {
         await sendReport(msg);
