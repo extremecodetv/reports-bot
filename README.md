@@ -18,7 +18,7 @@
 
 Бот решает эту проблему
 
-[![Preview](https://cdn1.savepice.ru/uploads/2018/10/2/8b7935deaa436c79c5a572ba9e05153d-full.png)]
+![Preview](https://cdn1.savepice.ru/uploads/2018/10/2/8b7935deaa436c79c5a572ba9e05153d-full.png)
 
 
 ## Deploy
