@@ -26,7 +26,7 @@ const isRespect = (text) => {
 
 module.exports = async (msg) => {
     if (isRespect(msg.text)) {
-        if (msg.from.id === managerUserId) {
+        if (msg.from.id === Number(managerUserId)) {
             await sendRespect(msg);
         }
     }
