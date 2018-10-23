@@ -41,7 +41,7 @@ const shedule = () => {
 
 let job
 if (!job) {
-    job = schedule.scheduleJob({ hour: 6, minute: 00 }, shedule);
+    job = schedule.scheduleJob({ hour: 8, minute: 00 }, shedule);
 }
 
 const easyHastags = ['изи', 'easy', 'изи_день', 'легчайше'];
