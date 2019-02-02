@@ -11,7 +11,6 @@ const isTag = require('./../util/isTag');
 
 let counter = 0
 let isEasyDay = false
-let isAlredyEasyDay = false
 
 const getRandomEmoji = (emoji) => {
     return emoji[Math.floor(Math.random() * emoji.length)];
@@ -31,6 +30,7 @@ const getEmoji = (counter) => {
 const shedule = () => {
     if (isEasyDay) {
         counter += 1
+        isEasyDay = false
     } else {
         counter = 0
     }
