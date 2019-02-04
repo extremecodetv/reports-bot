@@ -18,6 +18,6 @@ const longPollingMode = async () => {
 };
 
 (async () => {
-    
+    require('./jobs')
     await longPollingMode();
 })();

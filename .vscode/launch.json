@@ -10,6 +10,13 @@
             "name": "Launch Program",
             "program": "${workspaceFolder}\\bin\\bash",
             "outputCapture": "std"
+        },    
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Job",
+            "program": "${workspaceFolder}\\src\\jobs\\motivation.job.js",
+            "outputCapture": "std"
         }
     ]
 }
