@@ -14,12 +14,13 @@ const emoji = [
 ];
 
 const effectiveManager = [
-    ['🦉', '🦉']
+    ['🦉', '🐇'],
+    ['🦉', '🥕']    
 ]
 
 const getRandomEmojiPair = (text) => {
     if (text.indexOf('Респект от Бородача!') !== -1) {
-        return effectiveManager[0]
+        return effectiveManager[Math.floor(Math.random() * effectiveManager.length)]
     }
 
     return emoji[Math.floor(Math.random() * emoji.length)];
