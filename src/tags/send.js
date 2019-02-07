@@ -13,13 +13,21 @@ const emoji = [
     ['👽', '🤖']
 ];
 
-const getRandomEmojiPair = () => {
+const effectiveManager = [
+    ['🦉', '🦉']
+]
+
+const getRandomEmojiPair = (text) => {
+    if (text.indexOf('Респект от Бородача!') !== -1) {
+        return effectiveManager[0]
+    }
+
     return emoji[Math.floor(Math.random() * emoji.length)];
 };
 
 const sendReport = async (msg, text) => {
     const report = text;
-    const pair = getRandomEmojiPair();
+    const pair = getRandomEmojiPair(text);
     const post = await bot.sendMessage(
         chatId,
         report, {
