@@ -2,7 +2,7 @@ const logger = require('./../util/logger');
 const commands = require('require-all')({
     dirname: __dirname,
     filter: /(.+command)\.js$/,
-    recursive: true
+    recursive: false
 });
 
 const log = logger(module);
