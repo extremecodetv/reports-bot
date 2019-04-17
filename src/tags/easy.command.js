@@ -39,11 +39,6 @@ const shedule = () => {
     bot.sendMessage(chatId, 'Дней без проблем на платформе  — ' + counter + ' ' + emoji)
 }
 
-let job
-if (!job) {
-    job = schedule.scheduleJob({ hour: 8, minute: 00 }, shedule);
-}
-
 const easyHastags = ['изи', 'easy', 'изи_день', 'легчайше'];
 module.exports = async (msg) => {
     if (isTag(msg.text, easyHastags)) {
